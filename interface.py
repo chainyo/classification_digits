@@ -8,12 +8,12 @@ from tkinter import ttk
 from tensorflow import keras
 
 # Classe pour la création du canvas
-class Sketchpad(tk.Canvas):
+class Sketchpad():
     def __init__(self, **kwargs):
         # Fenêtre de l'application
         self.root = tk.Tk()
         self.root.title("Number Prediction")
-        self.root.geometry('800x800')
+        self.root.geometry('600x600')
         self.root.columnconfigure(0, weight=1)
         self.root.rowconfigure(0, weight=1)
 
@@ -70,6 +70,7 @@ class Sketchpad(tk.Canvas):
     
     def clear_canvas(self):
         self.sketch.delete('all')
+        self.pred_show.config(text=' ')
 
     def get_img(self):
         self.sketch.postscript(file='nb_to_pred.eps') 
