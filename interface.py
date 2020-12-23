@@ -16,24 +16,24 @@ class Sketchpad():
         self.root.geometry('700x700')
         self.root.columnconfigure(0, weight=1)
         self.root.rowconfigure(0, weight=1)
-        self.root.configure(bg='#434343')
+        self.root.configure(bg='#ACD0FF')
 
         # Frame pour le dessin
-        self.draw_frame = tk.Frame(self.root, width=700, height=600, bg='#434343')
+        self.draw_frame = tk.Frame(self.root, width=700, height=600, bg='#ACD0FF')
         self.draw_frame.grid(row=0)
         # Frame pour les boutons et l'affichage de la prédiction
-        self.container_frame = tk.Frame(self.root, width=700, height=200, bg='#434343')
+        self.container_frame = tk.Frame(self.root, width=700, height=200, bg='#ACD0FF')
         self.container_frame.grid(row=1)
         self.container_frame.columnconfigure(0, weight=1)
         self.container_frame.columnconfigure(1, weight=1)
         self.container_frame.rowconfigure(0, weight=1)
         # Frame des boutons
-        self.btn_frame = tk.Frame(self.container_frame, width=400, height=200, bg='#434343')
+        self.btn_frame = tk.Frame(self.container_frame, width=400, height=200, bg='#ACD0FF')
         self.btn_frame.grid(row=0, column=0)
         self.btn_frame.rowconfigure(0, weight=1)
         self.btn_frame.rowconfigure(1, weight=1)
         # Frame pour l'affichage de la prédiction
-        self.pred_frame = tk.Frame(self.container_frame, width=400, height=200, bg='#434343')
+        self.pred_frame = tk.Frame(self.container_frame, width=400, height=200, bg='#ACD0FF')
         self.pred_frame.grid(row=0, column=1)
 
         # Canvas pour le dessin
@@ -47,7 +47,7 @@ class Sketchpad():
         self.clear_btn.grid(row=1, pady=5)
 
         # Affichage de la prédiction
-        self.pred_show = tk.Label(self.pred_frame, text=' ', font=('Helvetica', 60), bg='#434343', fg='white')
+        self.pred_show = tk.Label(self.pred_frame, text=' ', font=('Helvetica', 60), bg='#ACD0FF', fg='white')
         self.pred_show.pack(padx=50)
 
         self.launch()
