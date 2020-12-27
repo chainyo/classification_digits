@@ -3,9 +3,15 @@ import tensorflow as tf
 import numpy as np
 import PIL
 import cv2
+import os
 
 from tkinter import ttk
 from tensorflow import keras
+
+
+# Règle un problème avec la fenetre tkinter
+if os.environ.get('DISPLAY','') == '':
+    os.environ.__setitem__('DISPLAY', ':0.0')
 
 # Classe pour la création du canvas
 class Sketchpad():
